@@ -1,11 +1,11 @@
-Source: crypttools
+Source: ancientsolutions-crypttools
 Maintainer: Caoimhe Chaos <caoimhechaos@protonmail.com>
 Section: python
 Priority: optional
 Build-Depends: python-all (>= 2.6.6-3), debhelper (>= 7)
 Standards-Version: 3.9.1
 
-Package: python-crypttools
+Package: python-ancientsolutions-crypttools
 Architecture: all
 Depends: ${misc:Depends}, ${python:Depends}
 Description: Python Cryptography Utilities
