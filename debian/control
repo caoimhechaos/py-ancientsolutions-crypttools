@@ -9,4 +9,6 @@ Package: python-ancientsolutions-crypttools
 Architecture: all
 Depends: ${misc:Depends}, ${python:Depends}
 Description: Python Cryptography Utilities
-
+ ancientsolutions-crypttools offers a number of helper methods for using the
+ regular cryptographic routines in Python. It offers simplified methods for
+ opening and extracting RSA keys from files, for example.
