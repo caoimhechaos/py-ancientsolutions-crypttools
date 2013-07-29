@@ -7,7 +7,7 @@ Standards-Version: 3.9.1
 
 Package: python-ancientsolutions-crypttools
 Architecture: all
-Depends: ${misc:Depends}, ${python:Depends}
+Depends: ${misc:Depends}, ${python:Depends}, python-crypto
 Description: Python Cryptography Utilities
  ancientsolutions-crypttools offers a number of helper methods for using the
  regular cryptographic routines in Python. It offers simplified methods for
