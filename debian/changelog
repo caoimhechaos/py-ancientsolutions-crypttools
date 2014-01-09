@@ -1,5 +1,5 @@
 ancientsolutions-crypttools (0.1-1) unstable; urgency=low
 
-  * source package automatically created by stdeb 0.6.0+git
+  * Initial release
 
- -- Caoimhe Chaos <caoimhechaos@protonmail.com>  Mon, 29 Jul 2013 23:46:22 +0200
+ -- Caoimhe Chaos <caoimhechaos@protonmail.com>  Thu, 09 Jan 2014 14:32:56 +0100
