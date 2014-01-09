@@ -2,13 +2,23 @@ Source: ancientsolutions-crypttools
 Maintainer: Caoimhe Chaos <caoimhechaos@protonmail.com>
 Section: python
 Priority: optional
-Build-Depends: python-all (>= 2.6.6-3), debhelper (>= 7)
+Build-Depends: python-all (>= 2.6.6-3), python3-all, python-crypto,
+ python-pyasn1, python3-crypto, python3-pyasn1, debhelper (>= 9), dh-python,
+ python-pytest, python3-pytest
 Standards-Version: 3.9.5
 
 Package: python-ancientsolutions-crypttools
 Architecture: all
-Depends: ${misc:Depends}, ${python:Depends}, python-crypto
+Depends: ${misc:Depends}, ${python:Depends}, python-crypto, python-pyasn1
 Description: Python Cryptography Utilities
  ancientsolutions-crypttools offers a number of helper methods for using the
  regular cryptographic routines in Python. It offers simplified methods for
+ opening and extracting RSA keys from files, for example.
+
+Package: python3-ancientsolutions-crypttools
+Architecture: all
+Depends: ${misc:Depends}, ${python3:Depends}, python3-crypto, python3-pyasn1
+Description: Python Cryptography Utilities (Python3 version)
+ ancientsolutions-crypttools offers a number of helper methods for using the
+ regular cryptographic routines in Python 3. It offers simplified methods for
  opening and extracting RSA keys from files, for example.
