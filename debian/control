@@ -3,7 +3,7 @@ Maintainer: Caoimhe Chaos <caoimhechaos@protonmail.com>
 Section: python
 Priority: optional
 Build-Depends: python-all (>= 2.6.6-3), debhelper (>= 7)
-Standards-Version: 3.9.1
+Standards-Version: 3.9.5
 
 Package: python-ancientsolutions-crypttools
 Architecture: all
