@@ -8,8 +8,6 @@ from Crypto.Util import asn1, number
 
 from pyasn1.codec.ber import encoder, decoder
 
-import exceptions
-
 _BEGIN_STR = '-----BEGIN '
 _END_STR = '-----END '
 _OID_RSA_MD2 = (1, 2, 840, 113549, 1, 1, 2)
