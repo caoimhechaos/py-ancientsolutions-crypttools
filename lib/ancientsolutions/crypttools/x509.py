@@ -165,3 +165,19 @@ def parse_certificate(indata):
     sigdata = bitstring_to_bytes(certdata[2])
 
     return Certificate(pubkey, encoder.encode(certdata[0]), sigdata, sigalgo)
+
+def parse_certificate_file(path):
+    """Parse the PEM or DER encoded X.509 certificate file "path".
+
+    Args:
+    path: path to a file containing the X.509 certificate.
+    Can be PEM encoded or plain DER.
+
+    Returns:
+    Certificate class describing the actual contents of the
+    certificate.
+    """
+    f = open(path, "r")
+    ret = parse_certificate(f.read())
+    f.close()
+    return ret
