@@ -4,6 +4,8 @@ from binascii import a2b_base64
 from Crypto.Util.asn1 import DerSequence
 from Crypto.PublicKey import RSA
 
+from os.path import exists
+
 
 class RSAKeyUnwrappingError(Exception):
     """Exception indicating an error with RSA key unwrapping."""
@@ -14,7 +16,7 @@ class RSAKeyUnwrappingError(Exception):
         super(Exception).__init__(message)
 
 
-class RSAKeyUnwrapper:
+class RSAKeyUnwrapper(object):
     """Unwrap a PEM encoded DER RSA key.
 
     Opens a file which contains a DER encoded RSA key in PEM format,
@@ -30,12 +32,15 @@ class RSAKeyUnwrapper:
         Args:
         path: Path to the file containing the RSA key.
         """
-        pemfile = open(path)
-        if not pemfile:
-            raise RSAKeyUnwrappnigError("No such file: " + path)
+        if exists(path):
+            pemfile = open(path)
+            if not pemfile:
+                raise RSAKeyUnwrappingError("No such file: " + path)
 
-        pem = pemfile.read()
-        pemfile.close()
+            pem = pemfile.read()
+            pemfile.close()
+        else:
+            pem = path
 
         lines = pem.replace(" ",'').split()
 
