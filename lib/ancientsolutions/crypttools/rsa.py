@@ -32,7 +32,7 @@ class RSAKeyUnwrapper(object):
         Args:
         path: Path to the file containing the RSA key.
         """
-        if exists(path):
+        if path is not None and exists(path):
             pemfile = open(path)
             if not pemfile:
                 raise RSAKeyUnwrappingError("No such file: " + path)
